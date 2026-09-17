@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "kg.asugtk")
-@EntityScan(basePackages = "kg.asugtk.domain.entity")
-@EnableJpaRepositories(basePackages = "kg.asugtk.domain.repository")
+@EntityScan(basePackages = {"kg.asugtk.domain.entity", "kg.asugtk.telemetry.entity"})
+@EnableJpaRepositories(basePackages = {"kg.asugtk.domain.repository", "kg.asugtk.telemetry.repository"})
 public class AsuApplication {
     public static void main(String[] args) {
         SpringApplication.run(AsuApplication.class, args);
